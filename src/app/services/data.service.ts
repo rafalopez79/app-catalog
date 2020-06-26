@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
-import { AppItem } from '../model/model';
+import { AppInfo } from '../model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +14,9 @@ export class DataService {
     this.httpClient = httpClient;
   }
 
-  public loadAppItems(): Observable<AppItem[]> {
-    const url = '';
-    return this.httpClient.get<AppItem[]>(url);
+  public loadAppItems(): Observable<AppInfo> {
+    const url = 'assets/data.json';
+    return this.httpClient.get<AppInfo>(url);
   }
 
 }

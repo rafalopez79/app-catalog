@@ -1,0 +1,27 @@
+{
+    "applications":[
+        {
+            "name":"Application1",
+            "description":"Simple application to provide data to the basic customer. Not all applications are the same, some of them are more equals than other",
+            "icon":"/assets/icon2.png",
+            "versions":[
+                {
+                    "name":"1.0",
+                    "releaseDate": "1970-01-01",
+                    "details":[
+                        {
+                            "title":"Maximization of profit",
+                            "description":"Implementation of a profit maximization strategy",
+                            "rating":3.2
+                        }
+                    ]
+                },{
+                    "name":"1.1",
+                    "releaseDate": "1971-01-01",
+                    "details":[
+                    ]
+                }
+            ]
+        }
+    ]
+}

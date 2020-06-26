@@ -59,22 +59,22 @@ export class AppVersion {
 export class AppItem {
     private name: string;
     private description: string;
-    private icon: URL;
-    private url: URL;
-    private urlPrevious: URL;
+    private icon: string;
+    private url: string;
+    private urlPrevious: string;
     private versions: AppVersion[];
 
     constructor(o : any){
         this.name = o?.name;
         this.description = o?.description;
         if (o?.icon){
-            this.icon = new URL(o.icon);
+            this.icon = o.icon;
         }
         if (o?.url){
-            this.url = new URL(o.url);
+            this.url = o.url;
         }
         if (o?.urlPrevious){
-            this.urlPrevious = new URL(o.urlPrevious);
+            this.urlPrevious = o.urlPrevious;
         }
         if (o?.versions){
             const array = Array.from(o.versions);
@@ -94,15 +94,15 @@ export class AppItem {
         return this.description;
     }
 
-    public getIcon(): URL{
+    public getIcon(): string{
         return this.icon;
     }
 
-    public getUrl(): URL{
+    public getUrl(): string{
         return this.url;
     }
 
-    public getUrlPrevious(): URL{
+    public getUrlPrevious(): string{
         return this.urlPrevious;
     }
 
@@ -113,5 +113,25 @@ export class AppItem {
     deserialize(input: any): AppItem {
         Object.assign(this, input);
         return this;
+    }
+}
+
+export class AppInfo{
+    private applications: AppItem[];
+
+    constructor(o : any) {
+       if (o?.applications){
+            const array = Array.from(o.applications);
+            const details : Array<AppItem> = [];
+            array.forEach(element => {
+                details.push(new AppItem(element));
+            });
+            this.applications = details;
+       }
+    }
+
+    public getApplications() : AppItem[]{
+        console.log(this.applications);
+        return this.applications;
     }
 }
