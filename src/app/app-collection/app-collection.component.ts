@@ -38,7 +38,7 @@ export class AppCollectionComponent implements OnInit {
     //this.items.push(new AppItem({'name': 'nuemo7', 'description':'Excellent application OY7'}));
 
     let details = [];
-    details.push(new AppVersionDetail({ 'title': 'Theme correction', 'rating':4, 'description': 'Correction of the seventh element of the list before de heather' }));
+    details.push(new AppVersionDetail({ 'title': 'Theme correction', 'rating':4, 'description': 'Corertiesrhtwleruihweirheirhwjerhfwuierhfiuwerhrection of the seventh element of the list before de heather' }));
     details.push(new AppVersionDetail({ 'title': 'Theme incorrection','rating':2.3, 'description': 'Correction of the seventh element of the list before de heather' }));
     details.push(new AppVersionDetail({ 'title': 'Theme incorrectionable' }));
 
@@ -49,14 +49,19 @@ export class AppCollectionComponent implements OnInit {
     versions.push(new AppVersion({ 'name': '1.2', 'releaseDate': '2019-01-26', 'details': details }));
     versions.push(new AppVersion({ 'name': '1.3', 'releaseDate': '2019-01-27', 'details': details }));
 
-    this.items.push(new AppItem({ 'name': 'nuemo8', 'description': 'Excellent application OY8', 'versions': versions }));
-    this.items.push(new AppItem({ 'name': 'nuemo9', 'description': 'Excellent application OY9' }));
-    this.items.push(new AppItem({ 'name': 'nuemo10', 'description': 'Excellent application OY10' }));
+    this.items.push(new AppItem({ 'name': 'App1', 'description': 'Excellent application OY8eertserilthsi uerhtui seruit eiurt seirut esruity isuer tiuesr tedsfjsdlfkjglskjdfhglsdhfgk sdfjlghl adfasdfasdf asdfas fas df asd er ser ser se sdjkfgn ljskd lgkshdflk ghslkdh jsdhfgh sldfjh gsdjkfh glkjsdh flkjglkjsdfhlkghsdklfjhg rthslerkjfslkjdfglsdjfglsjdfhlkshdlfkjghslkdfjhglksdfhgklsdhfgkljshdfghsdklfhg', 'versions': versions }));
+    this.items.push(new AppItem({ 'name': 'App2', 'description': 'Excellent application OY9' }));
+    this.items.push(new AppItem({ 'name': 'App3', 'description': 'Excellent application OY10' }));
+    this.items.push(new AppItem({ 'name': 'App1', 'description': 'Excellent application OY8', 'versions': versions }));
+    this.items.push(new AppItem({ 'name': 'App2', 'description': 'Excellent application OY9' }));
+    this.items.push(new AppItem({ 'name': 'App3', 'description': 'Excellent application OY10' }));
+    this.items.push(new AppItem({ 'name': 'App1', 'description': 'Excellent application OY8', 'versions': versions }));
+    this.items.push(new AppItem({ 'name': 'App2', 'description': 'Excellent application OY9' }));
+    this.items.push(new AppItem({ 'name': 'App3', 'description': 'Excellent application OY10' }));
   }
 
   public getItems(): AppItem[][] {
-    let data = AppCollectionComponent.split(this.items, this.columns);
-    return data;
+    return AppCollectionComponent.split(this.items, this.columns) ;
   }
 
   public open(item: AppItem): void {

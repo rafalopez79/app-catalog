@@ -1,13 +1,26 @@
 <div class="container">
-    <div class="row" *ngFor="let itemRow of getItems(); index as i">
-        <div class="col-md" *ngFor="let item of itemRow; index as j">
-            <h2>{{item.name}}</h2>
-            <p>{{item.description}}</p>
-            <div class="btn-toolbar">
-                <a class="btn btn-primary mr-1" d href="#">Start &raquo;</a>
-                <a class="btn btn-secondary mr-1" d href="#">Start previous &raquo;</a>
-                <a class="btn btn-info" (click)="open(item)">More info &raquo;</a>
-            </div>	
-          </div>
+    <div class="card-deck mt-4" *ngFor="let itemRow of getItems(); index as i">
+        <div class="card " style="min-width: 18rem;" *ngFor="let item of itemRow">
+            <div class="card-header">
+                <h4 class="card-title text-center">{{item.name}}</h4>
+            </div>
+            <div class="card-body">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class="card-img-left" src="assets/icon1.png" alt="Card image">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="card-text">{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="btn-toolbar">
+                    <a class="btn btn-primary mr-1" d href="#">Start &raquo;</a>
+                    <a class="btn btn-secondary mr-1" d href="#">Start previous &raquo;</a>
+                    <a class="btn btn-info" (click)="open(item)">More info &raquo;</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</div>  
