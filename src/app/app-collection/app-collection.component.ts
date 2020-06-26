@@ -38,8 +38,8 @@ export class AppCollectionComponent implements OnInit {
     //this.items.push(new AppItem({'name': 'nuemo7', 'description':'Excellent application OY7'}));
 
     let details = [];
-    details.push(new AppVersionDetail({ 'title': 'Theme correction', 'description': 'Correction of the seventh element of the list before de heather' }));
-    details.push(new AppVersionDetail({ 'title': 'Theme incorrection', 'description': 'Correction of the seventh element of the list before de heather' }));
+    details.push(new AppVersionDetail({ 'title': 'Theme correction', 'rating':4, 'description': 'Correction of the seventh element of the list before de heather' }));
+    details.push(new AppVersionDetail({ 'title': 'Theme incorrection','rating':2.3, 'description': 'Correction of the seventh element of the list before de heather' }));
     details.push(new AppVersionDetail({ 'title': 'Theme incorrectionable' }));
 
 

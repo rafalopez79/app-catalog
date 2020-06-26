@@ -3,6 +3,7 @@
 export class AppVersionDetail {
     private title: string;
     private description: string;
+    private rating: number;
 
     constructor(o : any) {
        Object.assign(this, o);
@@ -14,6 +15,10 @@ export class AppVersionDetail {
 
     public getDescription(): string {
         return this.description;
+    }
+
+    public getRating(): number{
+        return this.rating;
     }
 }
 
