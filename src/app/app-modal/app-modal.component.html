@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{item.getName()}}</h3>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="container">
+        <ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
+            <ngb-panel *ngFor="let version of item.getVersions(); index as i" id="toggle-{{i}}"
+                title="Version {{version.getName()}}">
+                <ng-template ngbPanelContent>
+                    <div class="list-group" *ngFor="let detail of version.getDetails()">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{detail.getTitle()}}</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">{{detail.getDescription()}}</p>
+                            <small>Donec id elit non mi porta.</small>
+                        </a>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="close()">Close</button>
+</div>

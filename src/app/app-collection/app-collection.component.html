@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row" *ngFor="let itemRow of getItems(); index as i">
+        <div class="col-md" *ngFor="let item of itemRow; index as j">
+            <h2>{{item.name}}</h2>
+            <p>{{item.description}}</p>
+            <div class="btn-toolbar">
+                <a class="btn btn-primary mr-1" d href="#">Start &raquo;</a>
+                <a class="btn btn-secondary mr-1" d href="#">Start previous &raquo;</a>
+                <a class="btn btn-info" (click)="open(item)">More info &raquo;</a>
+            </div>	
+          </div>
+    </div>
+</div>
