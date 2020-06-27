@@ -7,8 +7,8 @@
 <div class="modal-body">
     <div class="container">
         <ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
-            <ngb-panel *ngFor="let version of item.getVersions(); index as i" id="toggle-{{i}}"
-                title="Version {{version.getName()}}">
+            <ngb-panel *ngFor="let version of item.getVersions(); index as i" id="toggle-{{i}}" title="Version {{version.getName()}}">
+                
                 <ng-template ngbPanelContent>
                     <div class="list-group" *ngFor="let detail of version.getDetails()">
                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
