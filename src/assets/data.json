@@ -3,7 +3,7 @@
         {
             "name":"Application1",
             "description":"Simple application to provide data to the basic customer. Not all applications are the same, some of them are more equals than other",
-            "icon":"/assets/icon2.png",
+            "icon":"assets/icon2.png",
             "versions":[
                 {
                     "name":"1.0",
@@ -26,7 +26,7 @@
         {
             "name":"Application2",
             "description":"Complex application to provide data to the expert customer. Not all applications are the same, some of them are more equals than other. And this one is the most special in this planet",
-            "icon":"/assets/icon1.png",
+            "icon":"assets/icon1.png",
             "versions":[
                 {
                     "name":"1.0",
