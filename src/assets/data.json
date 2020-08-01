@@ -36,12 +36,22 @@
                             "title":"Maximization of profit",
                             "description":"Implementation of a profit maximization strategy",
                             "rating":3.2
+                        },
+                        {
+                            "title":"Maximization of disposals",
+                            "description":"Implementation of a custom tab",
+                            "rating":0.2
                         }
                     ]
                 },{
                     "name":"1.1",
                     "releaseDate": "1971-01-01",
                     "details":[
+                        {
+                            "title":"Gamification alright",
+                            "description":"Gamification of resources",
+                            "rating":1.2
+                        }
                     ]
                 }
             ]
